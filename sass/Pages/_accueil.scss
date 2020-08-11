@@ -1,3 +1,6 @@
+header#mainHeader{
+    background-color: $mainBlack;
+}
 #homePage{
     background-color: $mainWhite;
     #landingSection{
@@ -9,6 +12,10 @@
         align-items: center;
         color: $mainGrey;
         margin-bottom: 35vh;
+        h1{
+            font-weight: normal;
+            font-family: 'la_paloma';
+        }
         h2{
             position: relative;
             top: -50px;

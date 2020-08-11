@@ -22,7 +22,7 @@ a {
 }
 
 h1 {
-  font-family: "la_paloma";
+  font-family: "Roboto";
   font-size: 40px;
 }
 
@@ -84,7 +84,7 @@ h3 {
 
 header#mainHeader {
   width: 100%;
-  background-color: #121212;
+  background-color: #F1F1F1;
   height: 20vh;
   display: flex;
   justify-content: center;
@@ -157,6 +157,10 @@ footer .secondaryFooter {
   text-align: center;
 }
 
+header#mainHeader {
+  background-color: #121212;
+}
+
 #homePage {
   background-color: #FFF;
 }
@@ -169,6 +173,10 @@ footer .secondaryFooter {
   align-items: center;
   color: #F1F1F1;
   margin-bottom: 35vh;
+}
+#homePage #landingSection h1 {
+  font-weight: normal;
+  font-family: "la_paloma";
 }
 #homePage #landingSection h2 {
   position: relative;

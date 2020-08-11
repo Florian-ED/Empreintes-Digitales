@@ -1,0 +1,28 @@
+header#mainHeader{
+    width: 100%;
+    background-color: $mainBlack;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    padding-bottom: 5vh;
+    box-sizing: border-box;
+    img{
+        max-width: 80px;
+        max-height: 80px;
+        position: absolute;
+        top: 30px;
+        left: 60px;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        max-width: 900px;
+        a{
+            color: $mainGrey;
+            font-size: 14px;
+        }
+    }
+}

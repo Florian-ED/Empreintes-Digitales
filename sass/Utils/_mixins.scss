@@ -1,6 +1,5 @@
 @mixin greyBoxes{
     width: 95%;
-    box-sizing: border-box;
     margin: auto;
     padding: 8%;
     background-color: $mainGrey;
@@ -14,7 +13,6 @@
 
 @mixin fullWidthBoxes {
     width: 100%;
-    box-sizing: border-box;
     margin: auto;
     padding: 8% 4%;
     h2{
@@ -22,4 +20,12 @@
         max-width: 33%;
         margin: 0 auto 5% auto;
     }
+}
+
+@mixin whiteBoxes80
+ {
+    width: 80%;
+    margin: auto;
+    background-color: $mainWhite;
+    padding: 70px;
 }

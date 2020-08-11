@@ -12,7 +12,7 @@ header#mainHeader.homeMainHeader{
         height: calc(100vh - 135px);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         color: $mainGrey;
         margin-bottom: 35vh;

@@ -172,7 +172,7 @@ header#mainHeader.homeMainHeader a {
   height: calc(100vh - 135px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   color: #F1F1F1;
   margin-bottom: 35vh;
@@ -210,7 +210,6 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainPresentation {
   width: 95%;
-  box-sizing: border-box;
   margin: auto;
   padding: 8%;
   background-color: #F1F1F1;
@@ -233,7 +232,6 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainReviews {
   width: 100%;
-  box-sizing: border-box;
   margin: auto;
   padding: 8% 4%;
 }
@@ -262,7 +260,6 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainRealisations {
   width: 95%;
-  box-sizing: border-box;
   margin: auto;
   padding: 8%;
   background-color: #F1F1F1;
@@ -301,7 +298,6 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainTeam {
   width: 100%;
-  box-sizing: border-box;
   margin: auto;
   padding: 8% 4%;
 }
@@ -351,6 +347,7 @@ header#mainHeader.homeMainHeader a {
 
 .allPages {
   background-color: #F1F1F1;
+  padding-bottom: 50px;
 }
 .allPages #collabPresentation {
   text-align: center;
@@ -362,9 +359,111 @@ header#mainHeader.homeMainHeader a {
   margin: 0;
   max-width: 80%;
   margin: auto;
+  font-weight: 500;
 }
 .allPages #collabPresentation p.guide {
-  font-weight: bold;
+  font-weight: 500;
+}
+.allPages #collabPresentation p.telepresentiel {
+  margin-bottom: 50px;
+}
+.allPages #collabPresentation nav {
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.allPages #collabPresentation nav a {
+  color: #121212;
+  font-weight: 500;
+}
+.allPages #collabMethode {
+  width: 80%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 70px;
+}
+.allPages #collabMethode h2 {
+  text-align: center;
+}
+.allPages #collabMethode article {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.allPages #collabMethode article p.numberMethode {
+  width: 38%;
+  text-align: right;
+  padding-right: 70px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  color: #671751;
+  font-size: 140px;
+  text-shadow: 3px 3px 3px #00000029;
+}
+.allPages #collabMethode article div.texteMethode {
+  width: 62%;
+}
+.allPages #collabMethode article:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.allPages #collabMethode article:nth-child(odd) p.numberMethode {
+  text-align: left;
+  padding-left: 70px;
+  padding-right: 0;
+}
+.allPages #collabFormation {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.allPages #collabFormation article {
+  width: 45%;
+  background-color: #FFF;
+  padding: 50px 70px;
+  line-height: 30px;
+}
+.allPages #collabFormation article h2 {
+  line-height: 60px;
+  text-align: center;
+}
+.allPages #collabFormation .containerFormation {
+  text-align: center;
+}
+.allPages #collabFormation .containerFormation ul {
+  list-style-type: none;
+}
+.allPages #collabCout {
+  width: 80%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 70px;
+  margin-bottom: 50px;
+}
+.allPages #collabCout h2 {
+  max-width: 40%;
+  margin: auto;
+}
+.allPages #collabCout p {
+  max-width: 60%;
+  margin: auto;
+}
+.allPages #collabTest {
+  width: 43%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 90px;
+}
+.allPages #collabTest h2 {
+  text-align: center;
+}
+.allPages #collabTest p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

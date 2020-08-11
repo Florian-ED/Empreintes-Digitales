@@ -2,11 +2,11 @@ header#mainHeader{
     width: 100%;
     background-color: $mainGrey;
     height: 20vh;
+    max-height: 135px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    padding-bottom: 5vh;
     box-sizing: border-box;
     img{
         max-width: 80px;
@@ -21,7 +21,7 @@ header#mainHeader{
         width: 60%;
         max-width: 900px;
         a{
-            color: $mainGrey;
+            color: $mainBlack;
             font-size: 14px;
         }
     }

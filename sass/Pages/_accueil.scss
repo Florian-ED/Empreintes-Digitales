@@ -1,11 +1,15 @@
-header#mainHeader{
+header#mainHeader.homeMainHeader{
     background-color: $mainBlack;
+    a{
+        color: $mainGrey;
+    }
 }
 #homePage{
     background-color: $mainWhite;
     #landingSection{
         background-color: $mainBlack;
-        height: 80vh;
+        min-height: 80vh;
+        height: calc(100vh - 135px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -22,12 +26,12 @@ header#mainHeader{
         }
         #mainServices{
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             max-width: 1400px;
             padding-left: 5%;
             padding-right: 5%;
             position: relative;
-            top: 40vh;
+            top: 250px;
             article{
                 max-width: 340px;
                 background-color: $mainGrey;

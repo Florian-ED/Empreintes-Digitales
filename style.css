@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  box-sizing: border-box;
 }
 
 a {
@@ -86,11 +85,11 @@ header#mainHeader {
   width: 100%;
   background-color: #F1F1F1;
   height: 20vh;
+  max-height: 135px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  padding-bottom: 5vh;
   box-sizing: border-box;
 }
 header#mainHeader img {
@@ -107,7 +106,7 @@ header#mainHeader nav {
   max-width: 900px;
 }
 header#mainHeader nav a {
-  color: #F1F1F1;
+  color: #121212;
   font-size: 14px;
 }
 
@@ -157,8 +156,11 @@ footer .secondaryFooter {
   text-align: center;
 }
 
-header#mainHeader {
+header#mainHeader.homeMainHeader {
   background-color: #121212;
+}
+header#mainHeader.homeMainHeader a {
+  color: #F1F1F1;
 }
 
 #homePage {
@@ -166,7 +168,8 @@ header#mainHeader {
 }
 #homePage #landingSection {
   background-color: #121212;
-  height: 80vh;
+  min-height: 80vh;
+  height: calc(100vh - 135px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,12 +187,12 @@ header#mainHeader {
 }
 #homePage #landingSection #mainServices {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   max-width: 1400px;
   padding-left: 5%;
   padding-right: 5%;
   position: relative;
-  top: 40vh;
+  top: 250px;
 }
 #homePage #landingSection #mainServices article {
   max-width: 340px;
@@ -344,6 +347,24 @@ header#mainHeader {
 }
 #homePage #mainTeam .containerTeam article i:hover, #homePage #mainTeam .containerTeam article i:focus {
   color: #3d0e30;
+}
+
+.allPages {
+  background-color: #F1F1F1;
+}
+.allPages #collabPresentation {
+  text-align: center;
+  padding-top: 10%;
+  max-width: 60%;
+  margin: auto;
+}
+.allPages #collabPresentation h1 {
+  margin: 0;
+  max-width: 80%;
+  margin: auto;
+}
+.allPages #collabPresentation p.guide {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

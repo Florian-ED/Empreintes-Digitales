@@ -23,6 +23,10 @@ a {
 h1 {
   font-family: "Roboto";
   font-size: 40px;
+  margin: 0;
+  max-width: 80%;
+  margin: auto;
+  font-weight: 500;
 }
 
 h2, h3, body {
@@ -59,7 +63,7 @@ h3 {
 
 .secondaryButton {
   color: #671751;
-  background-color: #F1F1F1;
+  background-color: transparent;
   text-transform: uppercase;
   padding: 10px 25px;
   box-shadow: 0 2px 2px #0000003D;
@@ -154,6 +158,50 @@ footer .primaryFooter .legallyNav:before {
 footer .secondaryFooter {
   padding: 1vh;
   text-align: center;
+}
+
+.sites #avantagesSection {
+  width: 80%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 70px;
+  padding: 50px 80px;
+}
+.sites #avantagesSection .containerAvantages {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 10%;
+}
+.sites #besoinsContactSection {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sites #besoinsContactSection .besoins {
+  width: 30%;
+  padding: 0 10px;
+  background: transparent;
+  text-align: center;
+}
+.sites #besoinsContactSection .besoins h2 {
+  margin: 0;
+}
+.sites #besoinsContactSection .besoins ul {
+  list-style-type: none;
+  padding: 0;
+}
+.sites #besoinsContactSection .contact {
+  width: 30%;
+  text-align: center;
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.allPages {
+  background-color: #F1F1F1;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 header#mainHeader.homeMainHeader {
@@ -345,55 +393,45 @@ header#mainHeader.homeMainHeader a {
   color: #3d0e30;
 }
 
-.allPages {
-  background-color: #F1F1F1;
-  padding-bottom: 50px;
-}
-.allPages #collabPresentation {
+#collabPage #collabPresentation {
   text-align: center;
   padding-top: 10%;
   max-width: 60%;
   margin: auto;
 }
-.allPages #collabPresentation h1 {
-  margin: 0;
-  max-width: 80%;
-  margin: auto;
+#collabPage #collabPresentation p.guide {
   font-weight: 500;
 }
-.allPages #collabPresentation p.guide {
-  font-weight: 500;
-}
-.allPages #collabPresentation p.telepresentiel {
+#collabPage #collabPresentation p.telepresentiel {
   margin-bottom: 50px;
 }
-.allPages #collabPresentation nav {
+#collabPage #collabPresentation nav {
   max-width: 500px;
   margin: 50px auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.allPages #collabPresentation nav a {
+#collabPage #collabPresentation nav a {
   color: #121212;
   font-weight: 500;
 }
-.allPages #collabMethode {
+#collabPage #collabMethode {
   width: 80%;
   margin: auto;
   background-color: #FFF;
   padding: 70px;
 }
-.allPages #collabMethode h2 {
+#collabPage #collabMethode h2 {
   text-align: center;
 }
-.allPages #collabMethode article {
+#collabPage #collabMethode article {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 50px;
 }
-.allPages #collabMethode article p.numberMethode {
+#collabPage #collabMethode article p.numberMethode {
   width: 38%;
   text-align: right;
   padding-right: 70px;
@@ -403,18 +441,18 @@ header#mainHeader.homeMainHeader a {
   font-size: 140px;
   text-shadow: 3px 3px 3px #00000029;
 }
-.allPages #collabMethode article div.texteMethode {
+#collabPage #collabMethode article div.texteMethode {
   width: 62%;
 }
-.allPages #collabMethode article:nth-child(odd) {
+#collabPage #collabMethode article:nth-child(odd) {
   flex-direction: row-reverse;
 }
-.allPages #collabMethode article:nth-child(odd) p.numberMethode {
+#collabPage #collabMethode article:nth-child(odd) p.numberMethode {
   text-align: left;
   padding-left: 70px;
   padding-right: 0;
 }
-.allPages #collabFormation {
+#collabPage #collabFormation {
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -422,48 +460,89 @@ header#mainHeader.homeMainHeader a {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.allPages #collabFormation article {
+#collabPage #collabFormation article {
   width: 45%;
   background-color: #FFF;
   padding: 50px 70px;
   line-height: 30px;
 }
-.allPages #collabFormation article h2 {
+#collabPage #collabFormation article h2 {
   line-height: 60px;
   text-align: center;
 }
-.allPages #collabFormation .containerFormation {
+#collabPage #collabFormation .containerFormation {
   text-align: center;
 }
-.allPages #collabFormation .containerFormation ul {
+#collabPage #collabFormation .containerFormation ul {
   list-style-type: none;
 }
-.allPages #collabCout {
+#collabPage #collabCout {
   width: 80%;
   margin: auto;
   background-color: #FFF;
   padding: 70px;
   margin-bottom: 50px;
 }
-.allPages #collabCout h2 {
+#collabPage #collabCout h2 {
   max-width: 40%;
   margin: auto;
 }
-.allPages #collabCout p {
+#collabPage #collabCout p {
   max-width: 60%;
   margin: auto;
 }
-.allPages #collabTest {
+#collabPage #collabTest {
   width: 43%;
   margin: auto;
   background-color: #FFF;
   padding: 90px;
 }
-.allPages #collabTest h2 {
+#collabPage #collabTest h2 {
   text-align: center;
 }
-.allPages #collabTest p {
+#collabPage #collabTest p {
   text-align: center;
+}
+
+#contactPage {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#contactPage form {
+  width: 80%;
+  margin: auto;
+  background-color: #FFF;
+  padding: 70px;
+  width: 60%;
+  padding: 100px;
+  line-height: 60px;
+}
+#contactPage form h1 {
+  text-align: center;
+}
+#contactPage form input[type=text], #contactPage form input[type=email], #contactPage form input[type=number], #contactPage form textarea {
+  border-bottom: 1px solid #671751;
+  padding-bottom: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #671751;
+}
+#contactPage form input[type=text]::placeholder, #contactPage form input[type=email]::placeholder, #contactPage form input[type=number]::placeholder, #contactPage form textarea::placeholder {
+  color: #671751;
+  font-family: "Roboto";
+}
+#contactPage form input[type=radio] {
+  display: none;
+}
+#contactPage form label.secondaryButton {
+  margin-right: 10px;
+}
+#contactPage form input[type=button] {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

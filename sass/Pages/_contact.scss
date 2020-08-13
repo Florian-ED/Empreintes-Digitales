@@ -1,0 +1,38 @@
+#contactPage{
+    padding-top: $mainPadding;
+    padding-bottom: $mainPadding;
+    form{
+        h1{
+            text-align: center;
+        }
+        @include whiteBoxes80;
+        width: 60%;
+        padding: 100px;
+        line-height: 60px;
+        input[type="text"], input[type="email"], input[type="number"], textarea{
+            border-bottom: 1px solid $purple;
+            padding-bottom: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            color: $purple;
+        }
+        input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="number"]::placeholder, textarea::placeholder{
+            color: $purple;
+            font-family: 'Roboto';
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        label.secondaryButton{
+            margin-right: 10px;
+        }
+        input[type="button"]{
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            
+    }
+}

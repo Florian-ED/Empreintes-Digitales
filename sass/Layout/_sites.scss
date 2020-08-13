@@ -1,0 +1,36 @@
+.sites{
+    #avantagesSection{
+        @include whiteBoxes80;
+        padding: $mainPadding 80px;
+        .containerAvantages{
+            margin-top: $mainPadding;
+            display: grid;
+            grid-template-columns: 45% 45%;
+            grid-column-gap: 10%;
+        }
+    }
+    #besoinsContactSection{
+        margin-top: $mainPadding;
+        display: flex;
+        justify-content: space-evenly;
+        .besoins{
+            width: 30%;
+            padding: 0 10px;
+            background: transparent;
+            text-align: center;
+            h2{
+                margin: 0;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+            }
+        }
+        .contact{
+            width: 30%;
+            text-align: center;
+            background-color: $mainWhite;
+            padding: 20px;
+        }
+    }
+}

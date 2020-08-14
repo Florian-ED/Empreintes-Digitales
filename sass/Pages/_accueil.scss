@@ -12,17 +12,14 @@ header#mainHeader.homeMainHeader{
         height: calc(100vh - 135px);
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         color: $mainGrey;
-        margin-bottom: 35vh;
+        margin-bottom: 350px;
+        position: relative;
         h1{
             font-weight: normal;
             font-family: 'la_paloma';
-        }
-        h2{
-            position: relative;
-            top: -50px;
         }
         #mainServices{
             display: flex;
@@ -30,8 +27,8 @@ header#mainHeader.homeMainHeader{
             max-width: 1400px;
             padding-left: 5%;
             padding-right: 5%;
-            position: relative;
-            top: 250px;
+            position: absolute;
+            top: calc(100vh - 155px);
             article{
                 max-width: 340px;
                 background-color: $mainGrey;
@@ -94,7 +91,7 @@ header#mainHeader.homeMainHeader{
             grid-gap: 3vw;
             article{
                 background-color: $mainWhite;
-                padding: 1vh 1vw;
+                padding: 1vh 2vw;
                 text-align: center;
                 line-height: 30px;
                 box-shadow: $mainShadow;

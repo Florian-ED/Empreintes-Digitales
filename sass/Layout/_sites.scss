@@ -1,12 +1,23 @@
 .sites{
     #avantagesSection{
+        h1{
+            max-width: 550px;
+            text-align: center;
+        }
         @include whiteBoxes80;
         padding: $mainPadding 80px;
         .containerAvantages{
+            
             margin-top: $mainPadding;
             display: grid;
             grid-template-columns: 45% 45%;
             grid-column-gap: 10%;
+            h2{
+                margin-bottom: 0;
+            }
+            p{
+                margin-top: 0;
+            }
         }
     }
     #besoinsContactSection{

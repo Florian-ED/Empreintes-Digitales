@@ -14,10 +14,11 @@
 h1{
     font-family: 'Roboto';
     font-size: 40px;
-    margin: 0;
     max-width: 80%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 500;
+    line-height: 60px;
 }
 
 h2, h3, body{
@@ -38,4 +39,8 @@ h2{
 h3{
     font-weight: 400;
     font-size: 18px;
+}
+
+p{
+    text-align: justify;
 }

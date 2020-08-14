@@ -28,11 +28,38 @@
         <main id="contactPage" class="allPages">
             <form action="action.php" method="POST">
                 <h1>Que pouvons nous faire pour vous ?</h1>
-                <p>Bonjour, mon nom est <input type="text" placeholder="votre nom complet" /> et je voudrais discuter d'un projet potentiel.<br>
-                Pouvez vous me contacter par email : <input type="email" placeholder="votre email" /> ou m'appeler au : <input type="number" placeholder="votre numéro de téléphone" /><br>
-                Je suis intéressé par : <input type="radio" id="siteVitrine" /> <label for="siteVitrine" class="secondaryButton">Site Vitrine</label><input type="radio" id="siteEcommerce" /> <label for="siteEcommerce" class="secondaryButton">Site Ecommerce </label><input type="radio" id="autres" /> <label for="autres" class="secondaryButton">Autres</label><br>
-                Quelques informations sur mon projet : <textarea name="informations" id="informations" cols="30" rows="1" placeholder="mon projet concerne"></textarea><br>
-                <input type="button" value="Envoyer" class="uppercase primaryButton" /></p>
+                <div class="contactInformations">
+                    <label for="name">Bonjour, mon nom est</label>
+                    <input type="text" id="name" placeholder="votre nom complet" />
+                    <p>et je voudrais discuter d'un projet potentiel.</p>
+                    <br>
+                    <label for="mail">Pouvez vous me contacter par email :</label>
+                    <input id="mail" type="email" placeholder="votre email" />
+                    <label for="tel">ou m'appeler au :</label>
+                    <input id="tel" type="tel" placeholder="votre numéro de téléphone" />
+                </div>
+                <div class="contactProjet">
+                    <p>Je suis intéressé par :</p>
+                    <span>
+                        <input type="radio" id="siteVitrine" class="radioInput" />
+                        <label for="siteVitrine" class="secondaryButton">Site Vitrine</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="siteEcommerce" class="radioInput" />
+                        <label for="siteEcommerce" class="secondaryButton">Site Ecommerce </label>
+                    </span>
+                    <span>
+                        <input type="radio" id="autres" class="radioInput"/>
+                        <label for="autres" class="secondaryButton">Autres</label>
+                    </span>
+                    <br>
+                </div>
+                <div class="contactInfosSupp">
+                    <label for="informations">Quelques informations sur mon projet :</label>
+                    <textarea name="informations" id="informations" cols="30" rows="1" placeholder="mon projet concerne"></textarea>
+                    <br>
+                </div>
+                <input type="button" value="Envoyer" class="uppercase primaryButton" />
             </form>
         </main>
         <footer>

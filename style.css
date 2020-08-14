@@ -23,9 +23,9 @@ a {
 h1 {
   font-family: "Roboto";
   font-size: 40px;
-  margin: 0;
   max-width: 80%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 500;
 }
 
@@ -47,6 +47,10 @@ h2 {
 h3 {
   font-weight: 400;
   font-size: 18px;
+}
+
+p {
+  text-align: justify;
 }
 
 .primaryButton {
@@ -83,6 +87,10 @@ h3 {
 }
 .tertiaryButton:focus, .tertiaryButton:active, .tertiaryButton:hover {
   font-weight: 500;
+}
+
+i.fas.fa-check {
+  color: #671751;
 }
 
 header#mainHeader {
@@ -157,6 +165,8 @@ footer .primaryFooter .legallyNav:before {
 }
 footer .secondaryFooter {
   padding: 1vh;
+}
+footer .secondaryFooter p {
   text-align: center;
 }
 
@@ -167,11 +177,21 @@ footer .secondaryFooter {
   padding: 70px;
   padding: 50px 80px;
 }
+.sites #avantagesSection h1 {
+  max-width: 550px;
+  text-align: center;
+}
 .sites #avantagesSection .containerAvantages {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 45% 45%;
   grid-column-gap: 10%;
+}
+.sites #avantagesSection .containerAvantages h2 {
+  margin-bottom: 0;
+}
+.sites #avantagesSection .containerAvantages p {
+  margin-top: 0;
 }
 .sites #besoinsContactSection {
   margin-top: 50px;
@@ -220,18 +240,15 @@ header#mainHeader.homeMainHeader a {
   height: calc(100vh - 135px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   color: #F1F1F1;
-  margin-bottom: 35vh;
+  margin-bottom: 350px;
+  position: relative;
 }
 #homePage #landingSection h1 {
   font-weight: normal;
   font-family: "la_paloma";
-}
-#homePage #landingSection h2 {
-  position: relative;
-  top: -50px;
 }
 #homePage #landingSection #mainServices {
   display: flex;
@@ -239,8 +256,8 @@ header#mainHeader.homeMainHeader a {
   max-width: 1400px;
   padding-left: 5%;
   padding-right: 5%;
-  position: relative;
-  top: 250px;
+  position: absolute;
+  top: calc(100vh - 155px);
 }
 #homePage #landingSection #mainServices article {
   max-width: 340px;
@@ -265,7 +282,7 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainPresentation h2 {
   text-align: center;
-  max-width: 33%;
+  max-width: 550px;
   margin: 0 auto 5% auto;
 }
 #homePage #mainPresentation #textPresentation {
@@ -285,7 +302,7 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainReviews h2 {
   text-align: center;
-  max-width: 33%;
+  max-width: 550px;
   margin: 0 auto 5% auto;
 }
 #homePage #mainReviews #containerReviews {
@@ -315,7 +332,7 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainRealisations h2 {
   text-align: center;
-  max-width: 33%;
+  max-width: 550px;
   margin: 0 auto 5% auto;
 }
 #homePage #mainRealisations .containerRealisations {
@@ -325,7 +342,7 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainRealisations .containerRealisations article {
   background-color: #FFF;
-  padding: 1vh 1vw;
+  padding: 1vh 2vw;
   text-align: center;
   line-height: 30px;
   box-shadow: 0 3px 6px #00000029;
@@ -351,7 +368,7 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainTeam h2 {
   text-align: center;
-  max-width: 33%;
+  max-width: 550px;
   margin: 0 auto 5% auto;
 }
 #homePage #mainTeam .containerTeam {
@@ -399,11 +416,18 @@ header#mainHeader.homeMainHeader a {
   max-width: 60%;
   margin: auto;
 }
+#collabPage #collabPresentation h1 {
+  max-width: 550px;
+}
 #collabPage #collabPresentation p.guide {
+  text-align: center;
   font-weight: 500;
 }
 #collabPage #collabPresentation p.telepresentiel {
   margin-bottom: 50px;
+}
+#collabPage #collabPresentation hr {
+  max-width: 30%;
 }
 #collabPage #collabPresentation nav {
   max-width: 500px;
@@ -415,6 +439,10 @@ header#mainHeader.homeMainHeader a {
 #collabPage #collabPresentation nav a {
   color: #121212;
   font-weight: 500;
+  transition: color 0.5s;
+}
+#collabPage #collabPresentation nav a:hover {
+  color: #671751;
 }
 #collabPage #collabMethode {
   width: 80%;
@@ -519,6 +547,14 @@ header#mainHeader.homeMainHeader a {
 }
 #contactPage form h1 {
   text-align: center;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+#contactPage form div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 #contactPage form input[type=text], #contactPage form input[type=email], #contactPage form input[type=number], #contactPage form textarea {
   border-bottom: 1px solid #671751;
@@ -527,22 +563,46 @@ header#mainHeader.homeMainHeader a {
   border-left: none;
   border-right: none;
   color: #671751;
+  padding: 12px;
+}
+#contactPage form input[type=text]:focus, #contactPage form input[type=text]:active, #contactPage form input[type=email]:focus, #contactPage form input[type=email]:active, #contactPage form input[type=number]:focus, #contactPage form input[type=number]:active, #contactPage form textarea:focus, #contactPage form textarea:active {
+  border-bottom: 1.5px solid #ba2a93;
+  outline: none;
 }
 #contactPage form input[type=text]::placeholder, #contactPage form input[type=email]::placeholder, #contactPage form input[type=number]::placeholder, #contactPage form textarea::placeholder {
   color: #671751;
   font-family: "Roboto";
 }
-#contactPage form input[type=radio] {
-  display: none;
+#contactPage form .radioInput {
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  visibility: hidden;
+}
+#contactPage form .radioInput:checked + label.secondaryButton {
+  box-shadow: 0 8px 8px #0000003D;
+  background-color: #671751;
+  color: #F1F1F1;
 }
 #contactPage form label.secondaryButton {
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 13px;
+  padding: 8px 20px;
+  cursor: pointer;
 }
 #contactPage form input[type=button] {
   margin-top: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-color: transparent;
+  box-shadow: 0px 2px 2px #671751;
+}
+#contactPage form input[type=button]:focus, #contactPage form input[type=button]:active {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,11 +4,19 @@
         padding-top: 10%;
         max-width: 60%;
         margin: auto;
+        h1{
+            max-width: 550px;
+        }
         p.guide{
+            text-align: center;
             font-weight: 500;
         }
-        p.telepresentiel{
+        p.telepresentiel
+        { 
             margin-bottom: $mainPadding;
+        }
+        hr{
+            max-width: 30%;
         }
         nav{
             max-width: 500px;
@@ -19,6 +27,10 @@
             a{
                 color: $mainBlack;
                 font-weight: 500;
+                transition: color 0.5s;
+                &:hover{
+                    color: $purple;
+                }
             }
         }
     }

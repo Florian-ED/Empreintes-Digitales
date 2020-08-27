@@ -29,3 +29,23 @@
     background-color: $mainWhite;
     padding: 70px;
 }
+
+@mixin sm{
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+  
+ // Medium devices
+ @mixin md {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+  
+ // Custom devices
+ @mixin rwd($screen) {
+    @media (max-width: $screen+'px' ) {
+       @content;
+    }
+ }

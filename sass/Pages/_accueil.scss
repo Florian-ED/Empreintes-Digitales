@@ -22,8 +22,8 @@ header#mainHeader.homeMainHeader{
             font-family: 'la_paloma';
         }
         #mainServices{
-            display: flex;
-            justify-content: flex-end;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             max-width: 1400px;
             padding-left: 5%;
             padding-right: 5%;
@@ -42,6 +42,13 @@ header#mainHeader.homeMainHeader{
             }
             article:not(:last-child){
                 margin-right: 20px;
+            }
+        }
+        @include md{
+            margin-bottom: 450px;
+            #mainServices{
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
             }
         }
   

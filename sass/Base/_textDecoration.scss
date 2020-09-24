@@ -28,12 +28,18 @@ h2, h3, body{
 body{
     font-size: 14px;
     line-height: 40px;
+    @include mobile{
+        line-height: 25px;
+    }
 }
 
 h2{
     font-weight: 500;
     font-size: 20px;
     line-height: 60px;
+    @include mobile{
+        line-height: 35px;
+    }
 }
 
 h3{

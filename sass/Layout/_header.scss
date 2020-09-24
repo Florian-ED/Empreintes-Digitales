@@ -28,7 +28,7 @@ header#mainHeader{
             display: none;
         }
     }
-    @include md{
+    @include tablet{
         justify-content: space-between;
         padding: 0 50px;
         nav{
@@ -96,7 +96,7 @@ header#mainHeader{
                     position: absolute;
                     right: calc(-50px - 50vw);
                     max-width: 981px;
-                    width: 50vw;
+                    width: 100vw;
                     padding: 50px;
                     background: #ededed;
                     list-style-type: none;

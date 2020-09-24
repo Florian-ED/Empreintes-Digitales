@@ -23,10 +23,26 @@
                 <a href="#" class="uppercase">Réalisations</a>
                 <a href="#" class="uppercase">Equipe</a>
                 <a href="#" class="uppercase">Contact</a>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                   
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul>
+                        <li><a href="#" class="uppercase">Accueil</a></li>
+                        <li><a href="#" class="uppercase">Sites vitrines</a></li>
+                        <li><a href="#" class="uppercase">Sites e-commerces</a></li>
+                        <li><a href="#" class="uppercase">Réalisations</a></li>
+                        <li><a href="#" class="uppercase">Equipe</a></li>
+                        <li><a href="#" class="uppercase">Contact</a></li>
+                    </ul>
+                  </div>
             </nav>
         </header>
         <main id="contactPage" class="allPages">
-            <form action="action.php" method="POST">
+            <form action="../php/post_contact.php" method="POST">
                 <h1>Que pouvons nous faire pour vous ?</h1>
                 <div class="contactInformations">
                     <label for="name">Bonjour, mon nom est</label>
@@ -36,7 +52,7 @@
                     <label for="mail">Pouvez vous me contacter par email :</label>
                     <input id="mail" type="email" placeholder="votre email" />
                     <label for="tel">ou m'appeler au :</label>
-                    <input id="tel" type="tel" placeholder="votre numéro de téléphone" />
+                    <input id="tel" type="tel" placeholder="votre N° de téléphone" />
                 </div>
                 <div class="contactProjet">
                     <p>Je suis intéressé par :</p>
@@ -56,10 +72,10 @@
                 </div>
                 <div class="contactInfosSupp">
                     <label for="informations">Quelques informations sur mon projet :</label>
-                    <textarea name="informations" id="informations" cols="30" rows="1" placeholder="mon projet concerne"></textarea>
+                    <textarea name="informations" id="informations" cols="30" rows="2" placeholder="mon projet concerne"></textarea>
                     <br>
                 </div>
-                <input type="button" value="Envoyer" class="uppercase primaryButton" />
+                <input type="submit" value="Envoyer" class="uppercase primaryButton" />
             </form>
         </main>
         <footer>
@@ -70,6 +86,7 @@
                     <a href="#" class="uppercase">Réalisations</a>
                     <a href="#" class="uppercase">Equipe</a>
                     <a href="#" class="uppercase">Contact</a>
+                    
                 </nav>
                 <nav class="legallyNav">
                     <a href="#" class="uppercase">Mentions Légales</a>

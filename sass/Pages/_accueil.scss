@@ -20,6 +20,13 @@ header#mainHeader.homeMainHeader{
         h1{
             font-weight: normal;
             font-family: 'la_paloma';
+            @include tablet{
+                font-size: 30px;
+            }
+            @include mobile{
+                font-size: 20px;
+                max-width: none;
+            }
         }
         #mainServices{
             display: grid;
@@ -44,11 +51,24 @@ header#mainHeader.homeMainHeader{
                 margin-right: 20px;
             }
         }
-        @include md{
+        @include tablet{
             margin-bottom: 450px;
-            #mainServices{
+            div#mainServices{
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 10px;
+                article:not(:last-child), article{
+                    margin-right: 20px;
+                }
+            }
+        }
+        @include mobile{
+            margin-bottom: 700px;
+            div#mainServices{
+                grid-template-columns: 1fr;
+                top: calc(100vh - 115px);
+                article:not(:last-child), article{
+                    margin-right: 0px;
+                }
             }
         }
   
@@ -66,8 +86,14 @@ header#mainHeader.homeMainHeader{
                 color: $mainBlack;
             }
         }
+        
+        @include mobile{
+            #textPresentation{
+                grid-template-columns: 1fr;
+                grid-gap: 0;
+            }
+        }
     }
-
     #mainReviews{
         @include fullWidthBoxes;
         #containerReviews{
@@ -85,6 +111,25 @@ header#mainHeader.homeMainHeader{
                 }
                 .linkReviewer{
                     color: $mainBlack;
+                }
+            }
+        }
+        @include tablet{
+            #containerReviews{
+                article{
+                    width: 40%;
+                    min-width: unset;
+                    max-width: 350px;
+                }
+            }
+        }
+        @include mobile{
+            #containerReviews{
+                article{
+                    width: 80%;
+                    min-width: unset;
+                    max-width: unset;
+                    padding: 1vh 8vw;
                 }
             }
         }
@@ -115,6 +160,19 @@ header#mainHeader.homeMainHeader{
                     margin-top: 0;
                     list-style-type: none;
                     padding: 0;
+                }
+            }
+        }
+        @include tablet{
+            .containerRealisations{
+                grid-template-columns: 40vw 40vw;
+            }
+        }
+        @include mobile{
+            .containerRealisations{
+                grid-template-columns: 80vw;
+                article{
+                    padding: 1vh 8vw;
                 }
             }
         }
@@ -157,6 +215,12 @@ header#mainHeader.homeMainHeader{
                         color: darken($purple, 10);
                     }
                 }
+            }
+        }
+        @include mobile{
+            .containerTeam{
+                grid-template-columns: repeat(1, minmax(230px, 350px));
+                grid-template-rows: 300px;
             }
         }
     }

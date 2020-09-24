@@ -44,4 +44,18 @@
             padding: 20px;
         }
     }
+    @include mobile{
+        #avantagesSection{
+            .containerAvantages{
+                grid-template-columns: 100%;
+            }
+        }
+        #besoinsContactSection{
+            flex-direction: column;
+            article.besoins, article.contact{
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
 }

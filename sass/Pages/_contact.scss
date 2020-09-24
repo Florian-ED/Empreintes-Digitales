@@ -17,7 +17,7 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        input[type="text"], input[type="email"], input[type="number"], textarea{
+        input[type="text"], input[type="tel"],  input[type="email"], input[type="number"], textarea{
             border-bottom: 1px solid $purple;
             padding-bottom: 5px;
             border-top: none;
@@ -65,5 +65,23 @@
                 outline: none;
             }
         }   
+    }
+    @include tablet{
+        form{
+            width: 90%;
+            padding: 50px;
+        }
+    }
+    @include mobile{
+        form{
+            padding: 20px;
+            font-size: 12px;
+            line-height: 50px;
+            .contactProjet{
+                p{
+                    width: 100%;
+                }
+            }
+        }
     }
 }

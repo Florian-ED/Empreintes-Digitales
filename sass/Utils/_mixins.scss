@@ -28,23 +28,26 @@
     margin: auto;
     background-color: $mainWhite;
     padding: 70px;
+    @include tablet{
+        padding: 30px;
+    }
 }
 
-@mixin sm{
-    @media (max-width: #{$screen-sm-min}) {
+@mixin mobile{
+    @media (max-width: #{$mobile}) {
         @content;
     }
 }
   
  // Medium devices
- @mixin md {
-    @media (max-width: #{$screen-md-min}) {
+ @mixin tablet {
+    @media (max-width: #{$tablet}) {
         @content;
     }
  }
   
  // Custom devices
- @mixin rwd($screen) {
+ @mixin customDevice($screen) {
     @media (max-width: $screen+'px' ) {
        @content;
     }

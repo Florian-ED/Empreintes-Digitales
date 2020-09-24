@@ -44,4 +44,18 @@ footer{
             text-align: center;
         }
     }
+    @include tablet{
+        font-size: 12px;;
+        .primaryFooter{
+            flex-direction: column;
+            nav, div{
+                width: auto;
+            }
+            .legallyNav{
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
 }

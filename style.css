@@ -38,11 +38,21 @@ body {
   font-size: 14px;
   line-height: 40px;
 }
+@media (max-width: 768px) {
+  body {
+    line-height: 25px;
+  }
+}
 
 h2 {
   font-weight: 500;
   font-size: 20px;
   line-height: 60px;
+}
+@media (max-width: 768px) {
+  h2 {
+    line-height: 35px;
+  }
 }
 
 h3 {
@@ -195,7 +205,7 @@ header#mainHeader nav #menuToggle {
     position: absolute;
     right: calc(-50px - 50vw);
     max-width: 981px;
-    width: 50vw;
+    width: 100vw;
     padding: 50px;
     background: #ededed;
     list-style-type: none;
@@ -258,6 +268,20 @@ footer .secondaryFooter {
 footer .secondaryFooter p {
   text-align: center;
 }
+@media (max-width: 981px) {
+  footer {
+    font-size: 12px;
+  }
+  footer .primaryFooter {
+    flex-direction: column;
+  }
+  footer .primaryFooter nav, footer .primaryFooter div {
+    width: auto;
+  }
+  footer .primaryFooter .legallyNav:before {
+    display: none;
+  }
+}
 
 .sites #avantagesSection {
   width: 80%;
@@ -269,6 +293,11 @@ footer .secondaryFooter p {
 .sites #avantagesSection h1 {
   max-width: 550px;
   text-align: center;
+}
+@media (max-width: 981px) {
+  .sites #avantagesSection {
+    padding: 30px;
+  }
 }
 .sites #avantagesSection .containerAvantages {
   margin-top: 50px;
@@ -306,6 +335,18 @@ footer .secondaryFooter p {
   background-color: #FFF;
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .sites #avantagesSection .containerAvantages {
+    grid-template-columns: 100%;
+  }
+  .sites #besoinsContactSection {
+    flex-direction: column;
+  }
+  .sites #besoinsContactSection article.besoins, .sites #besoinsContactSection article.contact {
+    width: 90%;
+    margin: auto;
+  }
+}
 
 .allPages {
   background-color: #F1F1F1;
@@ -339,6 +380,17 @@ header#mainHeader.homeMainHeader a {
   font-weight: normal;
   font-family: "la_paloma";
 }
+@media (max-width: 981px) {
+  #homePage #landingSection h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  #homePage #landingSection h1 {
+    font-size: 20px;
+    max-width: none;
+  }
+}
 #homePage #landingSection #mainServices {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -366,9 +418,24 @@ header#mainHeader.homeMainHeader a {
   #homePage #landingSection {
     margin-bottom: 450px;
   }
-  #homePage #landingSection #mainServices {
+  #homePage #landingSection div#mainServices {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
+  }
+  #homePage #landingSection div#mainServices article:not(:last-child), #homePage #landingSection div#mainServices article {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #homePage #landingSection {
+    margin-bottom: 700px;
+  }
+  #homePage #landingSection div#mainServices {
+    grid-template-columns: 1fr;
+    top: calc(100vh - 115px);
+  }
+  #homePage #landingSection div#mainServices article:not(:last-child), #homePage #landingSection div#mainServices article {
+    margin-right: 0px;
   }
 }
 #homePage #mainPresentation {
@@ -392,6 +459,12 @@ header#mainHeader.homeMainHeader a {
 #homePage #mainPresentation #textPresentation a {
   align-self: end;
   color: #121212;
+}
+@media (max-width: 768px) {
+  #homePage #mainPresentation #textPresentation {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
 }
 #homePage #mainReviews {
   width: 100%;
@@ -420,6 +493,21 @@ header#mainHeader.homeMainHeader a {
 }
 #homePage #mainReviews #containerReviews article .linkReviewer {
   color: #121212;
+}
+@media (max-width: 981px) {
+  #homePage #mainReviews #containerReviews article {
+    width: 40%;
+    min-width: unset;
+    max-width: 350px;
+  }
+}
+@media (max-width: 768px) {
+  #homePage #mainReviews #containerReviews article {
+    width: 80%;
+    min-width: unset;
+    max-width: unset;
+    padding: 1vh 8vw;
+  }
 }
 #homePage #mainRealisations {
   width: 95%;
@@ -458,6 +546,19 @@ header#mainHeader.homeMainHeader a {
   margin-top: 0;
   list-style-type: none;
   padding: 0;
+}
+@media (max-width: 981px) {
+  #homePage #mainRealisations .containerRealisations {
+    grid-template-columns: 40vw 40vw;
+  }
+}
+@media (max-width: 768px) {
+  #homePage #mainRealisations .containerRealisations {
+    grid-template-columns: 80vw;
+  }
+  #homePage #mainRealisations .containerRealisations article {
+    padding: 1vh 8vw;
+  }
 }
 #homePage #mainTeam {
   width: 100%;
@@ -507,6 +608,12 @@ header#mainHeader.homeMainHeader a {
 #homePage #mainTeam .containerTeam article i:hover, #homePage #mainTeam .containerTeam article i:focus {
   color: #3d0e30;
 }
+@media (max-width: 768px) {
+  #homePage #mainTeam .containerTeam {
+    grid-template-columns: repeat(1, minmax(230px, 350px));
+    grid-template-rows: 300px;
+  }
+}
 
 #collabPage #collabPresentation {
   text-align: center;
@@ -542,11 +649,21 @@ header#mainHeader.homeMainHeader a {
 #collabPage #collabPresentation nav a:hover {
   color: #671751;
 }
+@media (max-width: 768px) {
+  #collabPage #collabPresentation nav {
+    flex-direction: column;
+  }
+}
 #collabPage #collabMethode {
   width: 80%;
   margin: auto;
   background-color: #FFF;
   padding: 70px;
+}
+@media (max-width: 981px) {
+  #collabPage #collabMethode {
+    padding: 30px;
+  }
 }
 #collabPage #collabMethode h2 {
   text-align: center;
@@ -578,6 +695,27 @@ header#mainHeader.homeMainHeader a {
   padding-left: 70px;
   padding-right: 0;
 }
+@media (max-width: 768px) {
+  #collabPage #collabMethode article, #collabPage #collabMethode article:nth-child(odd) {
+    flex-direction: column;
+    align-items: center;
+  }
+  #collabPage #collabMethode article p.numberMethode, #collabPage #collabMethode article:nth-child(odd) p.numberMethode {
+    width: auto;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  #collabPage #collabMethode article div.texteMethode, #collabPage #collabMethode article:nth-child(odd) div.texteMethode {
+    width: 100%;
+  }
+  #collabPage #collabMethode article:nth-child(odd) p.numberMethode {
+    width: auto;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
 #collabPage #collabFormation {
   display: flex;
   justify-content: space-between;
@@ -602,12 +740,41 @@ header#mainHeader.homeMainHeader a {
 #collabPage #collabFormation .containerFormation ul {
   list-style-type: none;
 }
+@media (max-width: 981px) {
+  #collabPage #collabFormation article {
+    width: 49%;
+    padding: 30px 20px;
+  }
+  #collabPage #collabFormation article h2 {
+    line-height: 40px;
+  }
+  #collabPage #collabFormation article ul {
+    padding: 0;
+  }
+  #collabPage #collabFormation article.containerFormation {
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  #collabPage #collabFormation {
+    flex-direction: column;
+  }
+  #collabPage #collabFormation article {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 #collabPage #collabCout {
   width: 80%;
   margin: auto;
   background-color: #FFF;
   padding: 70px;
   margin-bottom: 50px;
+}
+@media (max-width: 981px) {
+  #collabPage #collabCout {
+    padding: 30px;
+  }
 }
 #collabPage #collabCout h2 {
   max-width: 40%;
@@ -616,6 +783,15 @@ header#mainHeader.homeMainHeader a {
 #collabPage #collabCout p {
   max-width: 60%;
   margin: auto;
+}
+@media (max-width: 981px) {
+  #collabPage #collabCout h2 {
+    max-width: unset;
+    text-align: center;
+  }
+  #collabPage #collabCout p {
+    max-width: unset;
+  }
 }
 #collabPage #collabTest {
   width: 43%;
@@ -628,6 +804,16 @@ header#mainHeader.homeMainHeader a {
 }
 #collabPage #collabTest p {
   text-align: center;
+}
+@media (max-width: 981px) {
+  #collabPage #collabTest {
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  #collabPage #collabTest {
+    width: 100%;
+  }
 }
 
 #contactPage {
@@ -649,12 +835,17 @@ header#mainHeader.homeMainHeader a {
   margin-top: 0;
   margin-bottom: 50px;
 }
+@media (max-width: 981px) {
+  #contactPage form {
+    padding: 30px;
+  }
+}
 #contactPage form div {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-#contactPage form input[type=text], #contactPage form input[type=email], #contactPage form input[type=number], #contactPage form textarea {
+#contactPage form input[type=text], #contactPage form input[type=tel], #contactPage form input[type=email], #contactPage form input[type=number], #contactPage form textarea {
   border-bottom: 1px solid #671751;
   padding-bottom: 5px;
   border-top: none;
@@ -663,7 +854,7 @@ header#mainHeader.homeMainHeader a {
   color: #671751;
   padding: 12px;
 }
-#contactPage form input[type=text]:focus, #contactPage form input[type=text]:active, #contactPage form input[type=email]:focus, #contactPage form input[type=email]:active, #contactPage form input[type=number]:focus, #contactPage form input[type=number]:active, #contactPage form textarea:focus, #contactPage form textarea:active {
+#contactPage form input[type=text]:focus, #contactPage form input[type=text]:active, #contactPage form input[type=tel]:focus, #contactPage form input[type=tel]:active, #contactPage form input[type=email]:focus, #contactPage form input[type=email]:active, #contactPage form input[type=number]:focus, #contactPage form input[type=number]:active, #contactPage form textarea:focus, #contactPage form textarea:active {
   border-bottom: 1.5px solid #ba2a93;
   outline: none;
 }
@@ -701,6 +892,22 @@ header#mainHeader.homeMainHeader a {
 }
 #contactPage form input[type=button]:focus, #contactPage form input[type=button]:active {
   outline: none;
+}
+@media (max-width: 981px) {
+  #contactPage form {
+    width: 90%;
+    padding: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #contactPage form {
+    padding: 20px;
+    font-size: 12px;
+    line-height: 50px;
+  }
+  #contactPage form .contactProjet p {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -42,37 +44,48 @@
             </nav>
         </header>
         <main id="contactPage" class="allPages">
-            <form action="../php/post_contact.php" method="POST">
+            <?php if(array_key_exists('errors', $_SESSION)): ?>
+                <div class="alert alert-danger">
+                    <?= implode('<br>', $_SESSION['errors']); ?>
+                </div>
+            <?php unset($_SESSION['errors']); endif; ?>
+            <?php if(array_key_exists('success', $_SESSION)): ?>
+                <div class="alert alert-success">
+                    Votre email a bien été envoyé
+                </div>
+            <?php unset($_SESSION['errors']); endif; ?>
+
+            <form action="./php/post_contact.php" method="POST">
                 <h1>Que pouvons nous faire pour vous ?</h1>
                 <div class="contactInformations">
                     <label for="name">Bonjour, mon nom est</label>
-                    <input type="text" id="name" placeholder="votre nom complet" />
+                    <input required type="text" id="name" name="name" placeholder="votre nom complet" value="<?= isset($_SESSION['inputs']['name']) ? $_SESSION['inputs']['name'] : ''; ?>" />
                     <p>et je voudrais discuter d'un projet potentiel.</p>
                     <br>
                     <label for="mail">Pouvez vous me contacter par email :</label>
-                    <input id="mail" type="email" placeholder="votre email" />
+                    <input required id="mail" type="email" name="email" placeholder="votre email" value="<?= isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : ''; ?>"/>
                     <label for="tel">ou m'appeler au :</label>
-                    <input id="tel" type="tel" placeholder="votre N° de téléphone" />
+                    <input id="tel" type="tel" name="tel" placeholder="votre N° de téléphone" value="<?= isset($_SESSION['inputs']['telephone']) ? $_SESSION['inputs']['telephone'] : ''; ?>"/>
                 </div>
                 <div class="contactProjet">
                     <p>Je suis intéressé par :</p>
                     <span>
-                        <input type="radio" id="siteVitrine" class="radioInput" />
+                        <input name="service" type="radio" id="siteVitrine" class="radioInput" value="0"/>
                         <label for="siteVitrine" class="secondaryButton">Site Vitrine</label>
                     </span>
                     <span>
-                        <input type="radio" id="siteEcommerce" class="radioInput" />
+                        <input name="service" type="radio" id="siteEcommerce" class="radioInput" value="1"/>
                         <label for="siteEcommerce" class="secondaryButton">Site Ecommerce </label>
                     </span>
                     <span>
-                        <input type="radio" id="autres" class="radioInput"/>
+                        <input name="service" type="radio" id="autres" class="radioInput" value="2"/>
                         <label for="autres" class="secondaryButton">Autres</label>
                     </span>
                     <br>
                 </div>
                 <div class="contactInfosSupp">
-                    <label for="informations">Quelques informations sur mon projet :</label>
-                    <textarea name="informations" id="informations" cols="30" rows="2" placeholder="mon projet concerne"></textarea>
+                    <label for="message">Quelques informations sur mon projet :</label>
+                    <textarea required name="message" id="informations" cols="30" rows="2" placeholder="mon projet concerne"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : ''; ?></textarea>
                     <br>
                 </div>
                 <input type="submit" value="Envoyer" class="uppercase primaryButton" />
@@ -103,3 +116,8 @@
         </footer>
     </body>
 </html>
+<?php
+unset($_SESSION['inputs']);
+unset($_SESSION['success']);
+unset($_SESSION['errors']);
+?>

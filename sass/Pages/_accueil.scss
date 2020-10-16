@@ -6,6 +6,9 @@ header#mainHeader.homeMainHeader{
             color: darken($mainGrey, 30%);
         }
     }
+    nav div#menuToggle .iconsHmaburger span{
+        background-color: $mainGrey;
+    }
 }
 #homePage{
     background-color: $mainWhite;
@@ -35,15 +38,15 @@ header#mainHeader.homeMainHeader{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             max-width: 1400px;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding-left: $mainPadding;
+            padding-right: $mainPadding;
             position: absolute;
             top: calc(100vh - 155px);
             article{
                 max-width: 340px;
                 background-color: $mainGrey;
                 color: $mainBlack;
-                padding: 1% 5%;
+                padding: 1% $mainPadding;
                 box-shadow: $mainShadow;
                 a{
                     color: $purple;
@@ -83,7 +86,7 @@ header#mainHeader.homeMainHeader{
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 5%;
+            grid-gap: $mainPadding;
             a{
                 align-self: end;
                 color: $mainBlack;
@@ -108,7 +111,7 @@ header#mainHeader.homeMainHeader{
                 min-width: 400px;
                 padding: 2%;
                 box-shadow: $mainShadow;
-                margin-bottom: 5%;
+                margin-bottom: $mainPadding;
                 h3{
                     margin: 0;
                 }

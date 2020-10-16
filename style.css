@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+main.allPages {
+  padding: 0;
+}
+
 @font-face {
   font-family: "la_paloma";
   src: url("./font/la_paloma-webfont.woff2") format("woff2"), url("./fontla_paloma-webfont.woff") format("woff");
@@ -22,8 +26,7 @@ a {
 
 h1 {
   font-family: "Roboto";
-  font-size: 40px;
-  max-width: 80%;
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 500;
@@ -47,11 +50,11 @@ body {
 h2 {
   font-weight: 500;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 40px;
 }
 @media (max-width: 768px) {
   h2 {
-    line-height: 35px;
+    line-height: 30px;
   }
 }
 
@@ -202,7 +205,7 @@ header#mainHeader nav #menuToggle {
     cursor: pointer;
   }
   header#mainHeader nav #menuToggle .iconsHmaburger span {
-    background: #F1F1F1;
+    background: #121212;
     display: block;
     height: 3px;
     margin: 0 0 10px;
@@ -272,7 +275,7 @@ footer .secondaryFooter {
 footer .secondaryFooter p {
   text-align: center;
 }
-@media (max-width: 981px) {
+@media (max-width: 768px) {
   footer {
     font-size: 12px;
   }
@@ -286,13 +289,18 @@ footer .secondaryFooter p {
     display: none;
   }
 }
+@media (max-width: 981px) {
+  footer {
+    font-size: 12px;
+  }
+}
 
 .sites #avantagesSection {
   width: 80%;
   margin: auto;
   background-color: #FFF;
   padding: 5% 70px;
-  padding: 50px 80px;
+  padding: 5% 80px;
 }
 .sites #avantagesSection h1 {
   max-width: 550px;
@@ -304,7 +312,7 @@ footer .secondaryFooter p {
   }
 }
 .sites #avantagesSection .containerAvantages {
-  margin-top: 50px;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 45% 45%;
   grid-column-gap: 10%;
@@ -316,7 +324,7 @@ footer .secondaryFooter p {
   margin-top: 0;
 }
 .sites #besoinsContactSection {
-  margin-top: 50px;
+  margin-top: 5%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -354,8 +362,8 @@ footer .secondaryFooter p {
 
 .allPages {
   background-color: #F1F1F1;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 header#mainHeader.homeMainHeader {
@@ -366,6 +374,9 @@ header#mainHeader.homeMainHeader a {
 }
 header#mainHeader.homeMainHeader a:visited {
   color: #a5a5a5;
+}
+header#mainHeader.homeMainHeader nav div#menuToggle .iconsHmaburger span {
+  background-color: #F1F1F1;
 }
 
 #homePage {
@@ -624,26 +635,28 @@ header#mainHeader.homeMainHeader a:visited {
 
 #collabPage #collabPresentation {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
   max-width: 60%;
   margin: auto;
 }
-#collabPage #collabPresentation h1 {
-  max-width: 550px;
+@media (max-width: 768px) {
+  #collabPage #collabPresentation {
+    max-width: 80%;
+  }
 }
 #collabPage #collabPresentation p.guide {
   text-align: center;
   font-weight: 500;
 }
 #collabPage #collabPresentation p.telepresentiel {
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 #collabPage #collabPresentation hr {
   max-width: 30%;
 }
 #collabPage #collabPresentation nav {
   max-width: 500px;
-  margin: 50px auto;
+  margin: 5% auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -679,7 +692,7 @@ header#mainHeader.homeMainHeader a:visited {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 #collabPage #collabMethode article p.numberMethode {
   width: 38%;
@@ -723,18 +736,23 @@ header#mainHeader.homeMainHeader a:visited {
     margin-bottom: 40px;
   }
 }
+@media (max-width: 981px) {
+  #collabPage #collabMethode article p.numberMethode, #collabPage #collabMethode article:nth-child(odd) p.numberMethode {
+    font-size: 90px;
+  }
+}
 #collabPage #collabFormation {
   display: flex;
   justify-content: space-between;
   margin: auto;
   width: 80%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 #collabPage #collabFormation article {
   width: 45%;
   background-color: #FFF;
-  padding: 50px 70px;
+  padding: 5% 30px;
   line-height: 30px;
 }
 #collabPage #collabFormation article h2 {
@@ -746,6 +764,7 @@ header#mainHeader.homeMainHeader a:visited {
 }
 #collabPage #collabFormation .containerFormation ul {
   list-style-type: none;
+  padding: 0;
 }
 @media (max-width: 981px) {
   #collabPage #collabFormation article {
@@ -768,7 +787,9 @@ header#mainHeader.homeMainHeader a:visited {
   }
   #collabPage #collabFormation article {
     width: 100%;
-    margin-bottom: 10px;
+  }
+  #collabPage #collabFormation article.containerFormation {
+    margin-bottom: 5%;
   }
 }
 #collabPage #collabCout {
@@ -776,7 +797,7 @@ header#mainHeader.homeMainHeader a:visited {
   margin: auto;
   background-color: #FFF;
   padding: 5% 70px;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 @media (max-width: 981px) {
   #collabPage #collabCout {
@@ -804,7 +825,7 @@ header#mainHeader.homeMainHeader a:visited {
   width: 43%;
   margin: auto;
   background-color: #FFF;
-  padding: 90px;
+  padding: 5%;
 }
 #collabPage #collabTest h2 {
   text-align: center;
@@ -824,8 +845,8 @@ header#mainHeader.homeMainHeader a:visited {
 }
 
 #contactPage {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 #contactPage form {
   width: 80%;
@@ -833,14 +854,14 @@ header#mainHeader.homeMainHeader a:visited {
   background-color: #FFF;
   padding: 5% 70px;
   width: 60%;
-  padding: 100px;
+  padding: 5% 100px;
   line-height: 60px;
 }
 #contactPage form h1 {
   text-align: center;
   max-width: 100%;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 @media (max-width: 981px) {
   #contactPage form {
@@ -903,12 +924,12 @@ header#mainHeader.homeMainHeader a:visited {
 @media (max-width: 981px) {
   #contactPage form {
     width: 90%;
-    padding: 50px;
+    padding: 5% 50px;
   }
 }
 @media (max-width: 768px) {
   #contactPage form {
-    padding: 20px;
+    padding: 5% 20px;
     font-size: 12px;
     line-height: 50px;
   }

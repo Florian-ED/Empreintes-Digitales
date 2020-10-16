@@ -10,7 +10,7 @@
         }
         @include whiteBoxes80;
         width: 60%;
-        padding: 100px;
+        padding: $mainPadding 100px;
         line-height: 60px;
         div{
             display: flex;
@@ -69,12 +69,12 @@
     @include tablet{
         form{
             width: 90%;
-            padding: 50px;
+            padding: $mainPadding 50px;
         }
     }
     @include mobile{
         form{
-            padding: 20px;
+            padding: $mainPadding 20px;
             font-size: 12px;
             line-height: 50px;
             .contactProjet{

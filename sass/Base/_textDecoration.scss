@@ -13,8 +13,7 @@
 
 h1{
     font-family: 'Roboto';
-    font-size: 40px;
-    max-width: 80%;
+    font-size: 30px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 500;
@@ -36,9 +35,9 @@ body{
 h2{
     font-weight: 500;
     font-size: 20px;
-    line-height: 60px;
+    line-height: 40px;
     @include mobile{
-        line-height: 35px;
+        line-height: 30px;
     }
 }
 

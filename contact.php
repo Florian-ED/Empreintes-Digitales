@@ -19,27 +19,26 @@
         <header id="mainHeader">
             <img src="img/empreintes-digitales-logo.jpg" alt="">
             <nav>
-                <a href="#" class="uppercase">Accueil</a>
-                <a href="#" class="uppercase">Sites vitrines</a>
-                <a href="#" class="uppercase">Sites e-commerces</a>
-                <a href="#" class="uppercase">Réalisations</a>
-                <a href="#" class="uppercase">Equipe</a>
-                <a href="#" class="uppercase">Contact</a>
+                <a href="./index.html" class="uppercase">Accueil</a>
+                <a href="./siteVitrine.html" class="uppercase">Sites vitrines</a>
+                <a href="./siteEcommerce.html" class="uppercase">Sites e-commerces</a>
+                <a href="./collaboration.html" class="uppercase">Collaboration</a>
+                <a href="./contact.php" class="uppercase">Contact</a>
                 <div id="menuToggle">
-                    <input type="checkbox" />
-                   
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    
-                    <ul>
-                        <li><a href="#" class="uppercase">Accueil</a></li>
-                        <li><a href="#" class="uppercase">Sites vitrines</a></li>
-                        <li><a href="#" class="uppercase">Sites e-commerces</a></li>
-                        <li><a href="#" class="uppercase">Réalisations</a></li>
-                        <li><a href="#" class="uppercase">Equipe</a></li>
-                        <li><a href="#" class="uppercase">Contact</a></li>
-                    </ul>
+                    <div class="iconsHmaburger js-toggle-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span> 
+                    </div> 
+                    <div class="mobileNav mobile-header-nav"> 
+                        <ul>
+                            <li><a href="./index.html" class="uppercase">Accueil</a></li>
+                            <li><a href="./siteVitrine.html" class="uppercase">Sites vitrines</a></li>
+                            <li><a href="./siteEcommerce.html" class="uppercase">Sites e-commerces</a></li>
+                            <li><a href="./collaboration.html" class="uppercase">Collaboration</a></li>
+                            <li><a href="./contact.php" class="uppercase">Contact</a></li>
+                        </ul>
+                    </div>     
                   </div>
             </nav>
         </header>
@@ -94,12 +93,11 @@
         <footer>
             <div class="primaryFooter">
                 <nav class="secondaryNav">
-                    <a href="#" class="uppercase">Accueil</a>
-                    <a href="#" class="uppercase">Services</a>
-                    <a href="#" class="uppercase">Réalisations</a>
-                    <a href="#" class="uppercase">Equipe</a>
-                    <a href="#" class="uppercase">Contact</a>
-                    
+                    <a href="./index.html" class="uppercase">Accueil</a>
+                    <a href="./siteVitrine.html" class="uppercase">Sites vitrines</a>
+                    <a href="./siteEcommerce.html" class="uppercase">Sites e-commerces</a>
+                    <a href="./collaboration.html" class="uppercase">Collaboration</a>
+                    <a href="./contact.php" class="uppercase">Contact</a>  
                 </nav>
                 <nav class="legallyNav">
                     <a href="#" class="uppercase">Mentions Légales</a>

@@ -16,6 +16,7 @@
         <script type="text/javascript" src="./js/menuHamburger.js" defer></script>
         <link href="./css/jquery-backToTop.css" rel="stylesheet" type="text/css">
         <script src="./js/jquery-backToTop.js" defer></script>
+        <script src="./js/jquery-anchorScroll.js" defer></script>
     </head>
     <body>
         <header id="mainHeader" class="homeMainHeader">
@@ -251,7 +252,15 @@
         </footer>
         <script type="text/javascript">
             jQuery(function($){
-                var $button = $.backToTop({enabled:true, theme:'fawesome', effect:'spin', backgroundColor:'#671751', color:'white', width: '40', height:'40'});
+                var $button = $.backToTop({
+                    enabled:true, 
+                    theme:'fawesome', 
+                    effect:'spin', 
+                    backgroundColor:'#671751', 
+                    color:'white', 
+                    width: '40', 
+                    height:'40',
+                });
             });
         </script>
     </body>

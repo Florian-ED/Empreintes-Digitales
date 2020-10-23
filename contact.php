@@ -14,6 +14,11 @@
         <link rel="stylesheet" href="./style.css">
         <script src="https://kit.fontawesome.com/0075e21f22.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/menuHamburger.js" defer></script>
+        <link href="./css/jquery-backToTop.css" rel="stylesheet" type="text/css">
+        <script src="./js/jquery-backToTop.js" defer></script>
+        <script src="./js/jquery-anchorScroll.js" defer></script>
     </head>
     <body>
         <header id="mainHeader">
@@ -97,7 +102,7 @@
                     <a href="./siteVitrine.html" class="uppercase">Sites vitrines</a>
                     <a href="./siteEcommerce.html" class="uppercase">Sites e-commerces</a>
                     <a href="./collaboration.html" class="uppercase">Collaboration</a>
-                    <a href="./contact.php" class="uppercase">Contact</a>  
+                    <a href="./contact.php" class="uppercase">Contact</a> 
                 </nav>
                 <nav class="legallyNav">
                     <a href="#" class="uppercase">Mentions Légales</a>
@@ -112,6 +117,19 @@
                 <p class="uppercase">Imaginé et conçu par Empreintes Digitales</p>
             </div>
         </footer>
+        <script type="text/javascript">
+            jQuery(function($){
+                var $button = $.backToTop({
+                    enabled:true, 
+                    theme:'fawesome', 
+                    effect:'spin', 
+                    backgroundColor:'#671751', 
+                    color:'white', 
+                    width: '40', 
+                    height:'40',
+                });
+            });
+        </script>
     </body>
 </html>
 <?php

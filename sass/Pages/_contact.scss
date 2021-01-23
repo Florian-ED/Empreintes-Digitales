@@ -1,6 +1,20 @@
 #contactPage{
     padding-top: $mainPadding;
     padding-bottom: $mainPadding;
+    .alert-success{
+        text-align: center;
+        background: green;
+        width: 60%;
+        margin: auto;
+        color: white;
+    }  
+    .alert-danger{
+        text-align: center;
+        background: red;
+        width: 60%;
+        margin: auto;
+        color: white;
+    }  
     form{
         h1{
             text-align: center;
@@ -18,6 +32,7 @@
             flex-wrap: wrap;
         }
         input[type="text"], input[type="tel"],  input[type="email"], input[type="number"], textarea{
+            font-family: "Roboto";
             border-bottom: 1px solid $purple;
             padding-bottom: 5px;
             border-top: none;
@@ -29,10 +44,23 @@
                 border-bottom: 1.5px solid lighten($purple, 20);
                 outline: none;
             }
+            @include tablet{
+                font-size: 12px;
+            }
         }
-        input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="number"]::placeholder, textarea::placeholder{
+        input[type="email"]{
+            min-width: 200px;
+        }
+        input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
             color: $purple;
             font-family: 'Roboto';
+        }
+        textarea::-webkit-input-placeholder{
+            padding-top: 5px;
+        }
+        textarea#informations{
+            width: 300px;
+            height: 50px;
         }
         .radioInput{
             width: 0.1px;
@@ -47,6 +75,9 @@
             background-color: $purple;
             color: $mainGrey;
         }
+        span.checkboxRGPD{
+            display: flex;
+        }
         label.secondaryButton{
             margin-left: 5px;
             margin-right: 5px;
@@ -54,7 +85,7 @@
             padding: 8px 20px;
             cursor: pointer;
         }
-        input[type="button"]{
+        input[type="submit"]{
             margin-top: 20px;
             display: block;
             margin-left: auto;
@@ -64,7 +95,8 @@
             &:focus, &:active{
                 outline: none;
             }
-        }   
+        } 
+        
     }
     @include tablet{
         form{

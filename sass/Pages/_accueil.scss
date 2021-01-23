@@ -48,10 +48,10 @@ header#mainHeader.homeMainHeader{
                 color: $mainBlack;
                 padding: 1% $mainPadding;
                 box-shadow: $mainShadow;
-                a{
-                    color: $purple;
-                    text-decoration: underline;
-                }
+                // a{
+                //     color: $purple;
+                //     text-decoration: underline;
+                // }
             }
             article:not(:last-child){
                 margin-right: 20px;
@@ -111,7 +111,6 @@ header#mainHeader.homeMainHeader{
                 min-width: 400px;
                 padding: 2%;
                 box-shadow: $mainShadow;
-                margin-bottom: $mainPadding;
                 h3{
                     margin: 0;
                 }

@@ -14,6 +14,7 @@
         p.telepresentiel
         { 
             margin-bottom: $mainPadding;
+            text-align: center;
         }
         hr{
             max-width: 30%;
@@ -154,14 +155,14 @@
     }
     #collabCout{
         @include whiteBoxes80;
-        margin-bottom: $mainPadding;
         h2{
             max-width: 40%;
-            margin: auto;
+            text-align: center;
         }
         p{
             max-width: 60%;
             margin: auto;
+            text-align: center;
         }
         @include tablet{
             h2{

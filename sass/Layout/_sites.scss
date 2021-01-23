@@ -20,30 +20,68 @@
             }
         }
     }
-    #besoinsContactSection{
+    .siteCout{
+        @include whiteBoxes80;
         margin-top: $mainPadding;
+    }
+
+    .besoinsContactSection{
         display: flex;
-        justify-content: space-evenly;
-        .besoins{
-            width: 30%;
-            padding: 0 10px;
-            background: transparent;
-            text-align: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 80%;
+        margin-top: $mainPadding;
+        padding-bottom: $mainPadding;
+        article{
+            width: 45%;
+            background-color: $mainWhite;
+            padding: $mainPadding 30px;
+            line-height: 30px;
             h2{
-                margin: 0;
+                line-height: 60px;
+                text-align: center;
             }
+        }
+        .besoins{
+            text-align: center;
             ul{
-                list-style-type: none;
-                padding: 0;
+                list-style-type: circle;
+                padding-left: 2%;
+                text-align: left;
             }
         }
         .contact{
-            width: 30%;
             text-align: center;
-            background-color: $mainWhite;
-            padding: 20px;
+            p{
+                text-align: center;
+            }
+        }
+        @include tablet{
+            article{
+                width: 49%;
+                padding: 30px 20px;
+                h2{
+                    line-height: 40px;
+                }
+                ul{
+                    padding: 0;
+                }
+            }
+            article.besoins{
+                text-align: left;
+            }
+        }
+        @include mobile{
+            flex-direction: column;
+            article{
+                width: 100%;
+                &.besoins{
+                    margin-bottom: 5%;
+                }
+            }
         }
     }
+    
     @include mobile{
         #avantagesSection{
             .containerAvantages{

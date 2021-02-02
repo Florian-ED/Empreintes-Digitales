@@ -1,0 +1,124 @@
+header#mainHeader{
+    width: 100%;
+    background-color: $mainGrey;
+    height: 20vh;
+    max-height: 135px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    
+    img{
+        max-width: 80px;
+        max-height: 80px;
+/*         position: absolute;
+        top: 30px;
+        left: 60px; */
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        max-width: 900px;
+        a{
+            color: $mainBlack;
+            font-size: 14px;
+            &:visited{
+                color: lighten($mainBlack, 30%);
+            }
+        }
+        #menuToggle{
+            display: none;
+        }
+    }
+    @include tablet{
+        justify-content: space-between;
+        padding: 0 50px;
+        nav{
+            width: auto;
+            & > a{
+                display: none;
+            }
+            #menuToggle{
+                background-color: $mainGrey;
+                display: block;
+                background: transparent;
+                height: 100px;
+                z-index: 100;
+                .mobileNav{
+                    background-color: rgba($mainBlack, 0.8);
+                    display: none;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    top: 135px;
+                    width: 100vw;
+                    height: calc(100vh - 135px);
+                    left: 0;
+                    text-align: center;
+                    filter: none;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                    }
+                    li{
+                        padding: 8px 0;
+                        a{
+                            text-decoration: none;
+                            color: $mainWhite;
+                            display: block;
+                            transition: color 0.3s ease;
+                            &:visited{
+                                color: lighten($mainBlack, 60%);
+                            }
+                        }
+                    }
+                        
+                }
+                
+                .iconsHmaburger{
+                    display: inline-block;
+                    height: 100px;
+                    padding: 35px 25px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    span{
+                        background: $mainBlack;
+                        display: block;
+                        height: 3px;
+                        margin: 0 0 10px;
+                        transition: all 0.3s ease-in-out;
+                        width: 40px;
+                    }
+                    &.open{
+                        span{
+                            margin: 0 0 5px;
+                            &:first-child {
+                                transform: rotate(45deg);
+                                transform-origin: 10px;
+                            }
+                            &:nth-child(2) {
+                                opacity: 0;
+                            }
+                            &:nth-child(3) {
+                                transform: rotate(-45deg);
+                                transform-origin: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

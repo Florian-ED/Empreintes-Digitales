@@ -1,0 +1,232 @@
+header#mainHeader.homeMainHeader{
+    background-color: $mainBlack;
+    a{
+        color: $mainGrey;
+        &:visited{
+            color: darken($mainGrey, 30%);
+        }
+    }
+    nav div#menuToggle .iconsHmaburger span{
+        background-color: $mainGrey;
+    }
+}
+#homePage{
+    background-color: $mainWhite;
+    #landingSection{
+        background-color: $mainBlack;
+        min-height: 80vh;
+        height: calc(100vh - 135px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $mainGrey;
+        margin-bottom: 350px;
+        position: relative;
+        h1{
+            font-weight: normal;
+            font-family: 'la_paloma';
+            @include tablet{
+                font-size: 30px;
+            }
+            @include mobile{
+                font-size: 20px;
+                max-width: none;
+            }
+        }
+        #mainServices{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            max-width: 1400px;
+            padding-left: $mainPadding;
+            padding-right: $mainPadding;
+            position: absolute;
+            top: calc(100vh - 155px);
+            article{
+                max-width: 340px;
+                background-color: $mainGrey;
+                color: $mainBlack;
+                padding: 1% $mainPadding;
+                box-shadow: $mainShadow;
+                // a{
+                //     color: $purple;
+                //     text-decoration: underline;
+                // }
+            }
+            article:not(:last-child){
+                margin-right: 20px;
+            }
+        }
+        @include tablet{
+            margin-bottom: 450px;
+            div#mainServices{
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+                article:not(:last-child), article{
+                    margin-right: 20px;
+                }
+            }
+        }
+        @include mobile{
+            margin-bottom: 700px;
+            div#mainServices{
+                grid-template-columns: 1fr;
+                top: calc(100vh - 115px);
+                article:not(:last-child), article{
+                    margin-right: 0px;
+                }
+            }
+        }
+  
+    }
+
+    #mainPresentation{
+        @include greyBoxes;
+        #textPresentation{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: $mainPadding;
+            a{
+                align-self: end;
+                color: $mainBlack;
+            }
+        }
+        
+        @include mobile{
+            #textPresentation{
+                grid-template-columns: 1fr;
+                grid-gap: 0;
+            }
+        }
+    }
+    #mainReviews{
+        @include fullWidthBoxes;
+        #containerReviews{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            article{
+                width: 28%;
+                min-width: 400px;
+                padding: 2%;
+                box-shadow: $mainShadow;
+                h3{
+                    margin: 0;
+                }
+                .linkReviewer{
+                    color: $mainBlack;
+                }
+            }
+        }
+        @include tablet{
+            #containerReviews{
+                article{
+                    width: 40%;
+                    min-width: unset;
+                    max-width: 350px;
+                }
+            }
+        }
+        @include mobile{
+            #containerReviews{
+                article{
+                    width: 80%;
+                    min-width: unset;
+                    max-width: unset;
+                    padding: 1vh 8vw;
+                }
+            }
+        }
+    }
+
+    #mainRealisations{
+        @include greyBoxes;
+        .containerRealisations{
+            display: grid;
+            grid-template-columns: 25vw 25vw 25vw;
+            grid-gap: 3vw;
+            article{
+                background-color: $mainWhite;
+                padding: 1vh 2vw;
+                text-align: center;
+                line-height: 30px;
+                box-shadow: $mainShadow;
+                h3{
+                    margin-bottom: 0;
+                }
+                h4{
+                    margin-bottom: 0;
+                }
+                p{
+                    margin-top: 0;
+                }
+                ul{
+                    margin-top: 0;
+                    list-style-type: none;
+                    padding: 0;
+                }
+            }
+        }
+        @include tablet{
+            .containerRealisations{
+                grid-template-columns: 40vw 40vw;
+            }
+        }
+        @include mobile{
+            .containerRealisations{
+                grid-template-columns: 80vw;
+                article{
+                    padding: 1vh 8vw;
+                }
+            }
+        }
+    }
+    #mainTeam{
+        @include fullWidthBoxes;
+        .containerTeam{
+            display: grid;
+            grid-template-columns: repeat(2, minmax(230px, 350px));
+            grid-template-rows: 450px;
+            justify-content: center;
+            grid-gap: 2vw;
+            article{
+                box-shadow: $mainShadow;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+                text-align: center;
+                img{
+                    width: 150px;
+                    height: 150px;
+                    clip-path:ellipse(50% 50%);
+                    text-align: center;
+                    box-shadow:  $mainShadow;
+                }
+                h3{
+                    margin-bottom: 0;
+                }
+                h4{
+                    margin-top: 0;
+                    text-decoration: underline;
+                }
+                i{
+                    font-size: 25px;
+                    color: $purple;
+                    &:hover, &:focus{
+                        color: darken($purple, 10);
+                    }
+                }
+            }
+        }
+        @include mobile{
+            .containerTeam{
+                grid-template-columns: repeat(1, minmax(230px, 350px));
+                grid-template-rows: 300px;
+            }
+        }
+    }
+}

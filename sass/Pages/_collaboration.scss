@@ -1,0 +1,195 @@
+#collabPage{
+    #collabPresentation{
+        text-align: center;
+        padding-top: $mainPadding;
+        max-width: 60%;
+        margin: auto;
+        @include mobile{
+            max-width: 80%;
+        }
+        p.guide{
+            text-align: center;
+            font-weight: 500;
+        }
+        p.telepresentiel
+        { 
+            margin-bottom: $mainPadding;
+            text-align: center;
+        }
+        hr{
+            max-width: 30%;
+        }
+        nav{
+            max-width: 500px;
+            margin: $mainPadding auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            a{
+                color: $mainBlack;
+                font-weight: 500;
+                transition: color 0.5s;
+                &:hover{
+                    color: $purple;
+                }
+            }
+        }
+        @include mobile{
+            nav{
+                flex-direction: column;
+            }
+        }
+
+    }
+
+    #collabMethode{
+        @include whiteBoxes80;
+        h2{
+            text-align: center;
+        }
+        article{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: $mainPadding;
+            p.numberMethode{
+                width: 38%;
+                text-align: right;
+                padding-right: 70px;
+                margin-top: 60px;
+                margin-bottom: 0;
+                color: $purple;
+                font-size: 140px;
+                text-shadow: 3px 3px 3px #00000029;
+            }
+            div.texteMethode{
+                width: 62%;
+                
+            }
+        }
+        article:nth-child(odd){
+            flex-direction: row-reverse;
+            p.numberMethode{
+                text-align: left;
+                padding-left: 70px;
+                padding-right: 0;
+            }
+        }
+        @include mobile{
+            article, article:nth-child(odd){
+                flex-direction: column;
+                align-items: center;
+                p.numberMethode{
+                    width: auto;
+                    text-align: center;
+                    padding: 0;
+                    margin-bottom: 40px;
+                }
+                div.texteMethode{
+                    width: 100%;
+                    
+                }
+            }
+            article:nth-child(odd) p.numberMethode{
+                width: auto;
+                text-align: center;
+                padding: 0;
+                margin-bottom: 40px;
+            }
+        }
+        @include tablet{
+            article p.numberMethode, article:nth-child(odd) p.numberMethode{
+                font-size: 90px;
+            }
+        }
+
+    }
+    #collabFormation{
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 80%;
+        margin-top: $mainPadding;
+        margin-bottom: $mainPadding;
+        article{
+            width: 45%;
+            background-color: $mainWhite;
+            padding: $mainPadding 30px;
+            line-height: 30px;
+            h2{
+                line-height: 60px;
+                text-align: center;
+            }
+        }
+        .containerFormation{
+            text-align: center;
+            ul{
+                list-style-type: none;
+                padding: 0;
+            }
+        }
+        @include tablet{
+            article{
+                width: 49%;
+                padding: 30px 20px;
+                h2{
+                    line-height: 40px;
+                }
+                ul{
+                    padding: 0;
+                }
+            }
+            article.containerFormation{
+                text-align: left;
+            }
+        }
+        @include mobile{
+            flex-direction: column;
+            article{
+                width: 100%;
+                &.containerFormation{
+                    margin-bottom: 5%;
+                }
+            }
+        }
+    }
+    #collabCout{
+        @include whiteBoxes80;
+        h2{
+            max-width: 40%;
+            text-align: center;
+        }
+        p{
+            max-width: 60%;
+            margin: auto;
+            text-align: center;
+        }
+        @include tablet{
+            h2{
+                max-width: unset;
+                text-align: center;
+            }
+            p{
+                max-width: unset;
+            }
+        }
+    }
+    #collabTest{
+        width: 43%;
+        margin: auto;
+        background-color: $mainWhite;
+        padding: $mainPadding;
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        @include tablet{
+            padding: 30px;
+        }
+        @include mobile{
+            width: 100%;
+        }
+    }
+}

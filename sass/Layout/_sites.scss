@@ -1,0 +1,99 @@
+.sites{
+    #avantagesSection{
+        h1{
+            max-width: 550px;
+            text-align: center;
+        }
+        @include whiteBoxes80;
+        padding: $mainPadding 80px;
+        .containerAvantages{
+            
+            margin-top: $mainPadding;
+            display: grid;
+            grid-template-columns: 45% 45%;
+            grid-column-gap: 10%;
+            h2{
+                margin-bottom: 0;
+            }
+            p{
+                margin-top: 0;
+            }
+        }
+    }
+    .siteCout{
+        @include whiteBoxes80;
+        margin-top: $mainPadding;
+    }
+
+    .besoinsContactSection{
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 80%;
+        margin-top: $mainPadding;
+        padding-bottom: $mainPadding;
+        article{
+            width: 45%;
+            background-color: $mainWhite;
+            padding: $mainPadding 30px;
+            line-height: 30px;
+            h2{
+                line-height: 60px;
+                text-align: center;
+            }
+        }
+        .besoins{
+            text-align: center;
+            ul{
+                list-style-type: circle;
+                padding-left: 2%;
+                text-align: left;
+            }
+        }
+        .contact{
+            text-align: center;
+            p{
+                text-align: center;
+            }
+        }
+        @include tablet{
+            article{
+                width: 49%;
+                padding: 30px 20px;
+                h2{
+                    line-height: 40px;
+                }
+                ul{
+                    padding: 0;
+                }
+            }
+            article.besoins{
+                text-align: left;
+            }
+        }
+        @include mobile{
+            flex-direction: column;
+            article{
+                width: 100%;
+                &.besoins{
+                    margin-bottom: 5%;
+                }
+            }
+        }
+    }
+    
+    @include mobile{
+        #avantagesSection{
+            .containerAvantages{
+                grid-template-columns: 100%;
+            }
+        }
+        #besoinsContactSection{
+            flex-direction: column;
+            article.besoins, article.contact{
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+}

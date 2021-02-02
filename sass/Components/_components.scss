@@ -1,0 +1,45 @@
+.primaryButton{
+    color: $mainGrey;
+    background-color: $purple;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    box-shadow: 0 2px 2px #0000003D;
+    border-radius: 2px;
+    border: none;
+    &:focus, &:active, &:hover{
+        box-shadow: 0 8px 8px #0000003D;
+    }
+}
+
+.secondaryButton{
+    color: $purple;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    box-shadow: 0 2px 2px #0000003D;
+    border-radius: 2px;
+    border: 2px solid $purple;
+    &:focus, &:active, &:hover{
+        box-shadow: 0 8px 8px #0000003D;
+        background-color: $purple;
+        color: $mainGrey;
+    }
+}
+
+.tertiaryButton{
+    color: $purple;
+    text-decoration: underline;
+    font-weight: 400;
+    &:focus, &:active, &:hover{
+        font-weight: 500;
+    }
+}
+
+.desactivated{
+    color: #c2c2c2;
+    font-weight: 400;
+}
+
+i.fas.fa-check{
+    color: $purple;
+}

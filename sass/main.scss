@@ -1,0 +1,22 @@
+//UTILS
+@import './Utils/variables';
+@import './Utils/mixins';
+
+//BASE
+@import './Base/reset';
+@import './Base/textDecoration';
+
+//COMPONENTS
+@import './Components/components';
+
+//LAYOUT
+@import './Layout/header';
+@import './Layout/footer.scss';
+@import './Layout/sites';
+@import './Layout/backgroundPages';
+
+//PAGES
+@import './Pages/accueil';
+@import './Pages/collaboration';
+@import './Pages/contact';
+
